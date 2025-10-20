@@ -1,0 +1,95 @@
+/* Tun fon */
+body.night {
+  background: linear-gradient(to bottom, #0b1d51, #010a2f);
+  overflow: hidden;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+
+/* Kun fon */
+body.day {
+  background: linear-gradient(to bottom, #87ceeb, #b0e0e6);
+  color: black;
+}
+
+/* Oy shakli */
+.oy {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, #fff, #ccc);
+  border-radius: 50%;
+  box-shadow: 0 0 30px 10px #eee;
+  transition: opacity 1s ease;
+}
+
+/* Yulduzlar */
+.yulduzlar {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-radial-gradient(circle, #fff 0, #fff 1px, transparent 2px);
+  animation: yulduzYomgiri 10s linear infinite;
+  opacity: 0.2;
+  transition: opacity 1s ease;
+}
+
+@keyframes yulduzYomgiri {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
+
+/* Quyosh shakli */
+.quyosh {
+  position: fixed;
+  top: 30px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at center, #ffdd00, #ffaa00);
+  border-radius: 50%;
+  box-shadow: 0 0 40px 15px #ffdd00;
+  animation: quyoshCharqashi 4s linear infinite alternate;
+  transition: opacity 1s ease;
+}
+
+@keyframes quyoshCharqashi {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.3); }
+}
+
+/* Bog fon */
+.bog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: -1;
+}
+
+/* Boshqa elementlar */
+button {
+  background-color: #0066cc;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #004c99;
+}
